@@ -10,3 +10,9 @@ LCarousel *carousel = [[LCarousel alloc] initWithFrame:CGRectMake(0, 44, ScreenW
 [carousel resumeCarousel:^(NSDictionary *dict, NSInteger num) {
         NSLog(@"%i = %@", (int)num, dict);
     }];
+    
+3.个性化轮播里的控件背景颜色等，请在LCarousel初始化前根据LCarouselConfig里面提供的属性进行修改。
+Example
+
+LCarouselPageControlConfig *carouselPageControlConfig = [LCarouselConfig carouselConfig].carouselPageControlConfig;
+carouselPageControlConfig.carouselPageControlCurrentPageIndicatorTintColor = [UIColor blackColor];
